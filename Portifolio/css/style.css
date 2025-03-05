@@ -30,13 +30,11 @@ header {
     left: 0;
     width: 100%;
     padding: 2rem 7%;
-    background: transparent;
+    background: var(--bg-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 100;
-    transition: box-shadow 0.3s ease-in-out;
-    background: var(--bg-color);
 }
 
 header div.logo {
@@ -184,13 +182,18 @@ section {
 }
 
 
+@media(max-width: 768px) {
 
-@media(max-width: 900px) {
-    header .navbar {
+    header {
+        width: 100%;
+    }
+
+    .navbar {
         display: none;
     }
 
-    header .input-search form input {
+    .input-search form input,
+    .input-search form button {
         display: none;
     }
 
@@ -199,16 +202,24 @@ section {
         flex-direction: column;
     }
 
-    section .home-content {
+    .home-content {
        text-align: center;
        align-items: center;
     }
 
+    .home-content h3,
+    .home-content h1,
+    .home-content p {
+        text-align: center;
+    }
+
     img {
-        margin: 30px;
-        width: 350px;
+        margin-top: 30px;
+        width: 300px;
         align-items: center;
     }
+
+    
 
 }
 
