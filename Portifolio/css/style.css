@@ -10,11 +10,16 @@
 }
 
 :root {
+    --bg-fundo: #0B061F;
     --bg-color: #fdfdfd;
     --text-color: #333;
     --main-color: #754ef9;
     --white-color: #fdfdfd;
     --shadow-color: rgba(0, 0, 0, .2);
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -74,6 +79,8 @@ header div.input-search form button {
     width: 100px;
     height: 30px;
     border: 2px solid var(--main-color);
+    border-radius: 5px;
+    box-shadow: 0 .2rem .5rem var(--shadow-color);
     background-color: var(--main-color);
     color: var(--bg-color);
     font-weight: 600;
@@ -83,7 +90,7 @@ header div.input-search form button {
 
 header div.input-search form button:hover {
     background-color: transparent;
-    color: var(--text-color);
+    color: var(--main-color);
 }
 
 header div.btn-entrar button {
@@ -92,6 +99,8 @@ header div.btn-entrar button {
     background: transparent;
     color: var(--main-color);
     border: 2px solid var(--main-color);
+    border-radius: 5px;
+    box-shadow: 0 .2rem .5rem var(--shadow-color);
     font-weight: 600;
     transition: .5s ease;
 }
@@ -106,7 +115,7 @@ header div.btn-entrar button:hover {
 
 section {
     min-height: 100vh;
-    padding: 10rem 7% 2rem;
+    padding: 10rem 7%;
 }
 
 .home {
@@ -156,7 +165,7 @@ section {
 
 .btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 5px 15px;
     background: var(--main-color);
     box-shadow: 0 .2rem .5rem var(--shadow-color);
     font-size: 16px;
@@ -164,6 +173,7 @@ section {
     letter-spacing: .1rem;
     font-weight: 600;
     border: 2px solid transparent;
+    border-radius: 5px;
     transition: .5s ease;
 }
 
@@ -180,6 +190,98 @@ section {
     max-height: 100vh;
     box-shadow: 0 .2rem .5rem var(--shadow-color);
 }
+
+/* Section About */
+
+section .about {
+    display: flex;
+    align-items: center;
+
+}
+
+section .about .about-content {
+    max-width: 44rem;
+}
+
+section .about-content h2 {
+    font-size: 3rem;
+}
+
+section .about-content h2 span {
+    color: var(--main-color);
+}
+
+section .about-content h3 {
+    font-size: 1.2rem;
+}
+
+section .about-content h3 span {
+    color: var(--main-color);
+}
+
+section .about-content p {
+    text-align: justify;
+}
+
+/*Section Services */
+
+.services {
+    min-height: auto;
+    padding-bottom: 10rem;
+}
+
+.services h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 5rem;
+}
+
+.services h2 span {
+    color: var(--main-color);
+}
+
+.services .services-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.services .services-content .service-box {
+    text-align: center;
+    padding: 10px 30px;
+    background: var(--bg-color);
+    border-radius: 2rem;
+    border-top: .6rem solid var(--main-color);
+    border-bottom: .6rem solid var(--main-color);
+    box-shadow: 0 .1rem .5rem var(--shadow-color);
+    transition: .5s ease;
+}
+
+.services .services-content .service-box:hover {
+    box-shadow: 0 .1rem 2rem var(--shadow-color);
+    transform: scale(1.02);
+}
+
+.service-box i {
+    font-size: 2rem;
+    color: var(--main-color);
+}
+
+.service-box h3 {
+    color: var(--text-color);
+    transition: .5s;
+}
+
+.service-box h3:hover {
+    color: var(--main-color);
+}
+
+.services-box p {
+    font-size: 1.6rem;
+    padding: 20px 0;
+}
+
 
 
 @media(max-width: 768px) {
